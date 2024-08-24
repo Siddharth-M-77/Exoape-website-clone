@@ -7,11 +7,11 @@ const Work = () => {
         <h1 className="text-[15vw] font-semibold ">Work</h1>
         <div className="images absolute mt-72 w-full h-full flex left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] items-center justify-center gap-10 ">
           <div className="left-video-with-img w-1/2 h-full ">
-            <img
+            {/* <img
               className="w-96 absolute  object-cover"
               src="https://a.storyblok.com/f/133769/2400x2990/540fb12941/columbia-pictures-thumbnail.jpg/m/1300x1620/filters:quality(90)"
               alt="sjhbsj"
-            />
+            /> */}
             <video
               autoPlay
               muted
@@ -46,11 +46,11 @@ const Work = () => {
               </p>
             </div>
             <div className="right-video-with-img w-1/2 h-full ">
-              <img
+              {/* <img
                 className="w-72 absolute object-cover"
                 src="https://a.storyblok.com/f/133769/2400x2990/b66359da25/rino-pelle-hero.jpg/m/1300x1620/filters:quality(90)"
                 alt="sjhbsj"
-              />
+              /> */}
               <video
                 autoPlay
                 muted
