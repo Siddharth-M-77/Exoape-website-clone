@@ -2,7 +2,7 @@ import React from "react";
 
 const Work = () => {
   return (
-    <div className="w-full h-[200vh] pt-32 pl-40 bg-red-400">
+    <div className="w-full h-[200vh] pt-32 pl-40 ">
       <div className="h-full max-w-screen-xl  mx-auto relative ">
         <h1 className="text-[15vw] font-semibold ">Work</h1>
         <div className="images absolute mt-72 w-full h-full flex left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] items-center justify-center gap-10 ">
