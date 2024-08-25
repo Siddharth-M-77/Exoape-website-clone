@@ -1,3 +1,4 @@
+import Images from "./Components/Images";
 import Landing from "./Components/Landing";
 import Navbar from "./Components/Navbar";
 import Play from "./Components/Play";
@@ -10,6 +11,7 @@ export default function App() {
       <Landing/>
       <Work/>
       <Play/>
+      <Images/>
     </div>
   );
 }
