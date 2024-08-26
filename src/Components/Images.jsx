@@ -3,7 +3,7 @@ import React from 'react'
 const Images = () => {
   return (
     <div className='w-full h-[70vh] sm:min-h-[100vh] overflow-hidden'>
-        <div className="w-full h-full relative flex items-center justify-center">
+        <div className="w-full h-full relative flex items-center justify-center ">
             <div className="w-[15rem] sm:w-[25rem]  absolute h-[10rem] sm:h-[20rem] left-0 sm:left-32 sm:z-40  top-[35%] sm:top-[15%] ">
                 <video autoPlay muted loop className='w-full h-full ' src="
                 https://a.storyblok.com/f/133769/x/9c433c7aac/home-news-diesel-be-a-follower.mp4"></video>

@@ -1,7 +1,9 @@
 import Images from "./Components/Images";
 import Landing from "./Components/Landing";
 import Navbar from "./Components/Navbar";
+import Our_strory from "./Components/Our_strory";
 import Play from "./Components/Play";
+import Spread from "./Components/Spread";
 import Work from "./Components/Work";
 
 export default function App() {
@@ -12,6 +14,8 @@ export default function App() {
       <Work/>
       <Play/>
       <Images/>
+      <Spread/>
+      <Our_strory/>
     </div>
   );
 }
