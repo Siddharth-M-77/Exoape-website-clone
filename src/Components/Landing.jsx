@@ -1,10 +1,14 @@
+import { motion, stagger } from "framer-motion";
+import { Power2, Power4 } from "gsap";
 import React from "react";
 
 const Landing = () => {
   return (
     <div className="w-full  h-[230vh] relative">
-      <div className="picture w-full h-full">
+      <div className="picture w-full h-full overflow-hidden">
         <img
+          data-scroll
+          data-scroll-speed="-1"
           className="w-full h-full object-cover"
           src="https://a.storyblok.com/f/133769/1920x2716/5c24d6b467/exo-ape-hero-1.jpg/m/2400x3395/filters:quality(90)"
           alt=""
@@ -13,33 +17,65 @@ const Landing = () => {
 
       <div className="absolute mx-auto top-0 max-w-screen-2xl px-5 sm:px-10 h-full ">
         <div className="para mt-40 sm:mt-60 lg:mt-96 font-semibold ml-5 sm:ml-10 lg:ml-20 tracking-tight font-serif">
-          <p className="text-white text-base sm:text-xl">
-            Global digital design studio partnering with{" "}
-          </p>
-          <p className="text-white font-semibold text-base sm:text-xl tracking-tight font-serif">
-            brands and businesses that create exceptional{" "}
-          </p>
-          <p className="text-white font-semibold text-base sm:text-xl tracking-tight font-serif">
-            experiences where people live, work, and unwind.{" "}
-          </p>
+          {[
+            "Global digital design studio partnering with",
+            "brands and businesses that create exceptional",
+            "experiences where people live, work, and unwind.",
+          ].map((elem, i) => (
+            <p
+              key={i}
+              className="text-white font-[TWK-Lausana-300] text-base sm:text-2xl overflow-hidden"
+            >
+              <motion.span
+                className="inline-block origin-left"
+                initial={{ rotate: 90, y: "100%", opacity: 0 }}
+                animate={{ rotate: 0, y: 0, opacity: 1 }}
+                transition={{
+                  ease: [0.22,1,0.36,1],
+                  duration: 1,
+                  delay: i * 0.3,
+                }}
+              >
+                {elem}
+              </motion.span>
+            </p>
+          ))}
         </div>
-        <div className="headings pt-16 sm:pt-32 ml-5 sm:ml-10 lg:ml-20 text-white">
-          <h1 className="text-[14vw] sm:text-[12vw] lg:text-[10vw] leading-none tracking-tighter ">
-            Digital
-          </h1>
+        <div className="headings  pt-12 sm:pt-32 ml-5 sm:ml-10 lg:ml-20 text-white">
+          {["Digital", "Design", "Experince"].map((elem, i) => {
+            return <h1  key={i} className="text-[14vw] h-- overflow-hidden sm:text-[12vw] sm:h-[14vw] h-[16vw] lg:text-[13vw] lg:h-[15vw] leading-none tracking-tighter ">
+              
+              <motion.span
+                className="inline-block origin-left"
+                initial={{ rotate: 90, y: "100%", opacity: 0 }}
+                animate={{ rotate: 0, y: 0, opacity: 1 }}
+                transition={{
+                  ease: [0.22,1,0.36,1],
+                  duration: 1,
+                  delay: i * 0.3,
+                }}
+              >
+                {elem}
+              </motion.span>
+            </h1>;
+          })}
 
-          <h1 className="text-[14vw] sm:text-[12vw] lg:text-[10vw] leading-none tracking-tighter">
-            Design
-          </h1>
-          <h1 className="text-[14vw] sm:text-[12vw] lg:text-[10vw] leading-none tracking-tighter">
-            Experience
-          </h1>
         </div>
         <div className="para2 mt-10 sm:mt-20 ml-5 sm:ml-10 lg:ml-20">
-          <p className="w-[90%] sm:w-[70%] lg:w-[45%] text-white text-lg sm:text-2xl">
-            We help experience-driven companies thrive by making their audience
+          <p className="w-[90%] sm:w-[70%] lg:w-[45%]  text-white text-lg sm:text-2xl">
+          <motion.span
+            className="inline-block origin-left"
+            initial={{ rotate: 90, y: "100%", opacity: 0 }}
+            animate={{ rotate: 0, y: 0, opacity: 1 }}
+            transition={{
+              ease: [0.22,1,0.36,1],
+              duration: 3,
+            }}
+           
+          
+          >  We help experience-driven companies thrive by making their audience
             feel the refined intricacies of their brand and product in the
-            digital space. Unforgettable journeys start with a click.
+            digital space. Unforgettable journeys start with a click.</motion.span>
           </p>
         </div>
         <div className="bottom flex flex-col sm:flex-row items-start sm:items-center justify-between mt-10 sm:mt-20">
@@ -71,3 +107,4 @@ const Landing = () => {
 };
 
 export default Landing;
+

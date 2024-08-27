@@ -5,8 +5,12 @@ import Our_strory from "./Components/Our_strory";
 import Play from "./Components/Play";
 import Spread from "./Components/Spread";
 import Work from "./Components/Work";
+import LocomotiveScroll from 'locomotive-scroll';
 
 export default function App() {
+
+const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <div className="w-full h-full overflow-hidden ">
       <Navbar />
