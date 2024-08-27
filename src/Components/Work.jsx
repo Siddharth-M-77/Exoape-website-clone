@@ -22,7 +22,10 @@ const Work = () => {
 
         <div className="images relative  mt-96 max-w-screen-xl min-h-[100vh] flex  left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] items-center justify-center gap-10 ">
           <div className="left-video-with-img-1 w-1/2 h-full absolute top-32 left-16 ">
-            <img
+            <motion.img
+             initial={{opacity:1}}
+             whileHover={{opacity:0}}
+
               className="w-[35rem] sm:absolute z-[2] sm:left-0 sm:top-0  object-cover"
               src="https://a.storyblok.com/f/133769/2400x2990/540fb12941/columbia-pictures-thumbnail.jpg/m/1300x1620/filters:quality(90)"
               alt="sjhbsj"
@@ -31,13 +34,15 @@ const Work = () => {
               autoPlay
               muted
               loop
-              className="w-[34vw] sm:absolute scale-[1.2] z-[1] "
+              className="w-[34vw] sm:absolute scale-[1.2] z-[1] sm:top-[8.5%] sm:left-[7%]"
               src="https://player.vimeo.com/progressive_redirect/playback/927016456/rendition/720p/file.mp4?loc=external&log_user=0&signature=270ce5ba6bf44a717c74cf85de5f3de1d33a36ba5205b660e5e23b873199d71a"
             ></video>
           </div>
           <div className="left-video-with-img-2 w-[20vw] h-full absolute top-[190%] left-7">
-            <img
-              className="w-[20rem] sm:block absolute  object-cover"
+            <motion.img
+             initial={{opacity:1}}
+             whileHover={{opacity:0}}
+              className="w-[20rem] sm:block sm:absolute sm:z-[2] object-cover"
               src="https://a.storyblok.com/f/133769/2400x2990/540fb12941/columbia-pictures-thumbnail.jpg/m/1300x1620/filters:quality(90)"
               alt="sjhbsj"
             />
@@ -45,7 +50,7 @@ const Work = () => {
               autoPlay
               muted
               loop
-              className="w-96 absolute scale-[1.2] sm:hidden"
+              className="w-[20rem] absolute scale-[1] sm:absolute sm:z-1-[1]"
               src="https://player.vimeo.com/progressive_redirect/playback/914798271/rendition/720p/file.mp4?loc=external&log_user=0&signature=2af493277d050009920c26416a8d62a9a8c316353242c609ee157fcf1e300076"
             ></video>
           </div>
@@ -75,8 +80,10 @@ const Work = () => {
               </p>
             </div>
             <div className="right-video-with-img w-1/2 h-full ">
-              <img
-                className="w-[30rem] absolute object-cover sm:block"
+              <motion.img
+             initial={{opacity:1}}
+             whileHover={{opacity:0}}
+                className="w-[30rem]  sm:absolute object-cover sm:block sm:z-[2]"
                 src="https://a.storyblok.com/f/133769/2400x2990/b66359da25/rino-pelle-hero.jpg/m/1300x1620/filters:quality(90)"
                 alt="sjhbsj"
               />
@@ -84,15 +91,18 @@ const Work = () => {
                 autoPlay
                 muted
                 loop
-                className="w-96 absolute scale-[1.2] sm:hidden"
+                className="w-[30rem]  absolute scale-[1] sm:absolute sm:z-1-[1] "
                 src="https://player.vimeo.com/progressive_redirect/playback/914798484/rendition/720p/file.mp4?loc=external&log_user=0&signature=666d8099e0f1361eb1766ec0592b63a9bdf2b303cdb12ddfa5789d20ce8f523b"
               ></video>
             </div>
           </div>
           <div className="right gap-40 justify-between h-full absolute top-[160%] left-[40%] w-1/2 ">
             <div className="right-video-with-img w-1/2 h-full ">
-              <img
-                className="w-[30rem] absolute object-cover sm:block"
+              <motion.img
+             initial={{opacity:1}}
+             whileHover={{opacity:0}}
+
+                className="w-[30rem] sm:absolute object-cover sm:block sm:z-[2]"
                 src="https://a.storyblok.com/f/133769/2400x2990/b66359da25/rino-pelle-hero.jpg/m/1300x1620/filters:quality(90)"
                 alt="sjhbsj"
               />
@@ -100,7 +110,7 @@ const Work = () => {
                 autoPlay
                 muted
                 loop
-                className="w-[32vw] absolute scale-[1.2] sm:hidden"
+                className="w-[30rem] absolute scale-[1] sm:absolute sm:z-1-[1]"
                 src="https://player.vimeo.com/progressive_redirect/playback/914796979/rendition/540p/file.mp4?loc=external&log_user=0&signature=57ac30ff6fc3b29802f7414617e808395306f0b0fa5c9c6e3ef483a532f49c15"
               ></video>
             </div>
