@@ -79,19 +79,19 @@ const Work = () => {
                 forward-thinking clients and friends over the years.
               </p>
             </div>
-            <div className="right-video-with-img w-1/2 h-full ">
+            <div className="right-video-with-img overflow-hidden w-1/2 h-full ">
               <motion.img
              initial={{opacity:1}}
              whileHover={{opacity:0}}
                 className="w-[30rem]  sm:absolute object-cover sm:block sm:z-[2]"
-                src="https://a.storyblok.com/f/133769/2400x2990/b66359da25/rino-pelle-hero.jpg/m/1300x1620/filters:quality(90)"
+                src="https://a.storyblok.com/f/133769/2409x3000/cfd16e1a58/cambium-carbon-hero.jpg/m/1300x1619/filters:quality(90)"
                 alt="sjhbsj"
               />
               <video
                 autoPlay
                 muted
                 loop
-                className="w-[30rem]  absolute scale-[1] sm:absolute sm:z-1-[1] "
+                className="w-[29rem]  absolute scale-[1] sm:absolute sm:z-1-[1] "
                 src="https://player.vimeo.com/progressive_redirect/playback/914798484/rendition/720p/file.mp4?loc=external&log_user=0&signature=666d8099e0f1361eb1766ec0592b63a9bdf2b303cdb12ddfa5789d20ce8f523b"
               ></video>
             </div>
