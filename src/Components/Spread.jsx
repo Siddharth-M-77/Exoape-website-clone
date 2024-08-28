@@ -1,11 +1,11 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const Spread = () => {
-  return <div className="w-full h-[70vh] mt-20">
-
-    <div className="max-w-screen-2xl mx-auto flex items-center justify-center flex-col  gap-42">
-
-<div className="title flex items-center justify-center gap-3">
+  return (
+    <div className="w-full h-[70vh] mt-20">
+      <div className="max-w-screen-2xl mx-auto flex items-center justify-center flex-col  gap-42">
+        <div className="title flex items-center justify-center gap-3">
           <svg
             viewBox="0 0 12 12"
             fill="none"
@@ -23,18 +23,39 @@ const Spread = () => {
         </div>
 
         <div className="text  flex items-center justify-center flex-col  text-center">
-          <h1 className="text-9xl font-[TWK-Lausanne-300] font-normal text-center  tracking-tight leading-2">Spred</h1>
-
-          <h1 className="text-9xl font-[TWK-Lausanne-300] font-normal  text-center tracking-tight leading-2">The News</h1>
-
+          {["Spred", "The News"].map((elem, i) => {
+            return (
+              <h1 className="text-9xl  text-black font-[TWK-Lausanne-300] font-normal text-center overflow-hidden tracking-tight leading-2">
+                <motion.span
+                  key={i}
+                  className="inline-block origin-left"
+                  initial={{ rotate: 90, y: "40%", opacity: 0 }}
+                  whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    duration: 1,
+                    delay: i * 0.3,
+                  }}
+                >
+                  {elem}
+                </motion.span>
+              </h1>
+            );
+          })}
           <p className="text-2xl text-center pt-10 w-2/3 ">
-          Find out more about our work on these leading design and technology platforms.
+            Find out more about our work on these leading design and technology
+            platforms.
           </p>
-          <a className="border-b-[1px] mt-4 font-semibold pb-2 border-black" href="#">Browse All News</a>
+          <a
+            className="border-b-[1px] mt-4 font-semibold pb-2 border-black"
+            href="#"
+          >
+            Browse All News
+          </a>
         </div>
-        </div>
-
-  </div>;
+      </div>
+    </div>
+  );
 };
 
 export default Spread;

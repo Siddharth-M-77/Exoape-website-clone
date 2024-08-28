@@ -28,8 +28,8 @@ const Landing = () => {
             >
               <motion.span
                 className="inline-block origin-left"
-                initial={{ rotate: 90, y: "100%", opacity: 0 }}
-                animate={{ rotate: 0, y: 0, opacity: 1 }}
+                initial={{ rotate: 90, y: "40%", opacity: 0 }}
+                whileInView={{ rotate: 0, y: 0, opacity: 1 }}
                 transition={{
                   ease: [0.22,1,0.36,1],
                   duration: 1,
@@ -47,8 +47,8 @@ const Landing = () => {
               
               <motion.span
                 className="inline-block origin-left"
-                initial={{ rotate: 90, y: "100%", opacity: 0 }}
-                animate={{ rotate: 0, y: 0, opacity: 1 }}
+                initial={{ rotate: 90, y: "40%", opacity: 0 }}
+                whileInView={{ rotate: 0, y: 0, opacity: 1 }}
                 transition={{
                   ease: [0.22,1,0.36,1],
                   duration: 1,
@@ -62,11 +62,11 @@ const Landing = () => {
 
         </div>
         <div className="para2 mt-10 sm:mt-20 ml-5 sm:ml-10 lg:ml-20">
-          <p className="w-[90%] sm:w-[70%] lg:w-[45%]  text-white text-lg sm:text-2xl">
+          <p className="w-[90%] sm:w-[70%] lg:w-[45%]  text-white text-lg sm:text-2xl overflow-hidden">
           <motion.span
             className="inline-block origin-left"
             initial={{ rotate: 90, y: "100%", opacity: 0 }}
-            animate={{ rotate: 0, y: 0, opacity: 1 }}
+            whileInView={{ rotate: 0, y: 0, opacity: 1 }}
             transition={{
               ease: [0.22,1,0.36,1],
               duration: 3,

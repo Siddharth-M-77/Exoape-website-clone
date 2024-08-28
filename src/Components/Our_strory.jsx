@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const footerLinks = [
@@ -20,17 +21,42 @@ const footerLinks = [
 const Our_strory = () => {
   return (
     <div className="max-w-screen-2xl mx-auto mt-5 min-h-[90vh] bg-[#070707] p-[8rem] ">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between ">
         <div className="headings">
-          <h1 className="text-9xl font-[TWK-Lausanne-300] font-normal text-white">
-            OUR
-          </h1>
-          <h1 className="text-9xl font-[TWK-Lausanne-300] font-normal text-white">
-            STORY
-          </h1>
-          <p className="text-white text-2xl tracking-tighter w-[80%] opacity-60">
-            The story behind Exo Ape is one of exploration, creativity, and
-            curiosity.
+          {
+            ["OUR","STORY"].map((elem,i)=>{
+            return  <h1 className="text-9xl  overflow-hidden font-[TWK-Lausanne-300] font-normal text-white">
+              <motion.span
+                key={i}
+                  className="inline-block origin-left"
+                  initial={{ rotate: 90, y: "40%", opacity: 0 }}
+                  whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    duration: 1,
+                  }}
+                >
+                  {elem}
+                </motion.span>  
+            </h1>
+            })
+          }
+        
+          <p className="text-white text-2xl tracking-tighter w-[80%] opacity-60 overflow-hidden">
+
+          <motion.span
+                  className="inline-block origin-left"
+                  initial={{ rotate: 90, y: "40%", opacity: 0 }}
+                  whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    duration: 1,
+                  }}
+                >
+                    The story behind Exo Ape is one of exploration, creativity, and
+                    curiosity.
+                </motion.span>  
+          
           </p>
         </div>
         <div className="video w-[50rem] aspect-video">
@@ -61,12 +87,22 @@ const Our_strory = () => {
             ))}
           </div>
         ))}
-        <div className="w-[7rem] h-full flex items-end">
+        <div className="w-[7rem] h-full overflow-hidden flex items-end">
           <a
             className="border-b-[1px] text-white pb-[2px] border-transparent hover:transition-all hover:border-white font-semibold"
             href="#"
           >
-            Our Story
+             <motion.span
+                  className="inline-block origin-left"
+                  initial={{ rotate: 90, y: "40%", opacity: 0 }}
+                  whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    duration: 1,
+                  }}
+                >
+                  Our Story
+                </motion.span>  
           </a>
         </div>
       </footer>
